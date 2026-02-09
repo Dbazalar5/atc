@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Service Desk - Tickets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">Service Desk</div>
+
+      <nav class="sidebar__nav">
+        <a class="nav__item" href="#">Dashboard</a>
+        <a class="nav__item nav__item--active" href="#">Tickets</a>
+        <a class="nav__item" href="#">Nuevo Ticket</a>
+        <a class="nav__item" href="#">Usuarios</a>
+        <a class="nav__item" href="#">Métricas</a>
+        <a class="nav__item" href="#">Configuración</a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="user">
+          <div class="user__avatar">A</div>
+          <div class="user__meta">
+            <div class="user__name">Agente</div>
+            <div class="user__role">Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search">
+          <input class="input" placeholder="Buscar tickets, IDs, clientes..." />
+        </div>
+        <div class="topbar__actions">
+          <button class="btn btn--secondary">Notificaciones</button>
+          <button class="btn btn--primary">Nuevo ticket</button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="pagehead">
+          <div>
+            <h1 class="h1">Tickets</h1>
+            <p class="muted">Gestiona y filtra tickets del Service Desk.</p>
+          </div>
+          <div class="pagehead__actions">
+            <select class="input">
+              <option>Estado: Todos</option>
+              <option>Open</option>
+              <option>In Progress</option>
+              <option>Closed</option>
+              <option>Escalated</option>
+            </select>
+            <select class="input">
+              <option>Prioridad: Todas</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+              <option>Urgent</option>
+            </select>
+            <button class="btn btn--secondary">Exportar</button>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card kpi">
+            <div class="kpi__label">Abiertos</div>
+            <div class="kpi__value">24</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi__label">En proceso</div>
+            <div class="kpi__value">11</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi__label">Cerrados</div>
+            <div class="kpi__value">92</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi__label">Escalados</div>
+            <div class="kpi__value">3</div>
+          </div>
+        </div>
+
+        <div class="card tablewrap">
+          <div class="tablewrap__head">
+            <div class="tablewrap__title">Listado</div>
+            <div class="tablewrap__meta muted">Mostrando 1–10 de 130</div>
+          </div>
+
+          <div class="table">
+            <div class="row row--head">
+              <div>ID</div><div>Asunto</div><div>Categoría</div><div>Prioridad</div>
+              <div>Estado</div><div>Asignado</div><div>Creado</div><div></div>
+            </div>
+
+            <div class="row">
+              <div class="mono">TCK-1024</div>
+              <div>Problema de acceso</div>
+              <div>Access</div>
+              <div><span class="badge badge--warning">High</span></div>
+              <div><span class="badge badge--info">Open</span></div>
+              <div>María</div>
+              <div class="muted">2026-02-09</div>
+              <div><button class="btn btn--ghost">Ver</button></div>
+            </div>
+
+            <div class="row">
+              <div class="mono">TCK-1025</div>
+              <div>No llega correo de verificación</div>
+              <div>Email</div>
+              <div><span class="badge badge--neutral">Medium</span></div>
+              <div><span class="badge badge--warning">In Progress</span></div>
+              <div>Carlos</div>
+              <div class="muted">2026-02-08</div>
+              <div><button class="btn btn--ghost">Ver</button></div>
+            </div>
+
+            <div class="row">
+              <div class="mono">TCK-1026</div>
+              <div>Solicitud de cambio de datos</div>
+              <div>Profile</div>
+              <div><span class="badge badge--neutral">Low</span></div>
+              <div><span class="badge badge--success">Closed</span></div>
+              <div>Andrea</div>
+              <div class="muted">2026-02-07</div>
+              <div><button class="btn btn--ghost">Ver</button></div>
+            </div>
+          </div>
+
+          <div class="pager">
+            <button class="btn btn--secondary">Anterior</button>
+            <div class="muted">Página 1 de 13</div>
+            <button class="btn btn--secondary">Siguiente</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
